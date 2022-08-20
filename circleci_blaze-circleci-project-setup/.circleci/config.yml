@@ -18,6 +18,15 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World! it blazing cool on the CI cloud "
 
+  greeting-time:
+    docker:
+      - image: cimg/base:stable
+
+    steps:
+      - checkout
+      - run:
+         name: "greeting-time"
+         command: "echo this wshould everyone on time zone"
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
